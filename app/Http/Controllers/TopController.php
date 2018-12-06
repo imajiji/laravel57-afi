@@ -14,6 +14,11 @@ class TopController extends Controller
      */
     public function index()
     {
+        $posts = Post::all();
+
+        foreach ($posts as $post) {
+            // dd($post);
+        }
         return view('index');
     }
 

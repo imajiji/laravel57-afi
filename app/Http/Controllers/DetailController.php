@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 
 class DetailController extends Controller
@@ -11,9 +12,11 @@ class DetailController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $post   = Post::find($request->id);
+        $images = $post->images;
+        return view('detail', compact('post', 'images'));
     }
 
     /**
