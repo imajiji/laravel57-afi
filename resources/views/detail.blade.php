@@ -34,7 +34,7 @@
                         @endforeach
                         <p>タグ：
                             @foreach($tags as $tag)
-                            {{$tag->name}} 
+                            <a href="{{$tag->name}}" target="_blank">{{$tag->name}}</a>
                             @endforeach
                         </p>
                     </div>
