@@ -24,7 +24,7 @@
                         <h1 class="text-center">{{$post->title}}</h1><img class="img-fluid" src="/assets/img/ITM0013552_1.jpg" style="width: 770px;"></div>
                     <div class="text">
                         <p>{{$post->detail}}</p>
-                        <p><a href="{{$post->product_link}}">{{$post->product_link_text}}</a></p>
+                        <p><a href="{{$post->product_link}}" target="_blank">{{$post->product_link_text}}</a></p>
                         <h2>コメント</h2>
                         <p>{{$post->comment}}</p>
                         @foreach($images as $image)
@@ -32,7 +32,11 @@
                             <figcaption></figcaption>
                         </figure>
                         @endforeach
-                        <p>タグ：ゲーム、イラスト、デジケット</p>
+                        <p>タグ：
+                            @foreach($tags as $tag)
+                            {{$tag->name}} 
+                            @endforeach
+                        </p>
                     </div>
                 </div>
             </div>
