@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Post;
-use App\Image;
 use Illuminate\Http\Request;
 
 class TopController extends Controller
@@ -16,10 +15,7 @@ class TopController extends Controller
     public function index()
     {
         $posts  = Post::all();
-        $images = Image::all();
-        dd($posts);
-
-        return view('index', compact('posts', 'images'));
+        return view('index', compact('posts'));
     }
 
     /**

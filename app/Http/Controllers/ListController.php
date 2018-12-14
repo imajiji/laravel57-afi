@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 
 class ListController extends Controller
@@ -11,9 +12,10 @@ class ListController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $posts  = Post::where('category_id', $request->category)->get();
+        return view('list', compact('posts'));
     }
 
     /**
