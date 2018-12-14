@@ -17,7 +17,7 @@ class DetailController extends Controller
         $post   = Post::find($request->id);
         $images = $post->images;
         $tags   = $post->tags;
-        // dd($tags);
+        // dd($images);
         return view('detail', compact('post', 'images', 'tags'));
     }
 

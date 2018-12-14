@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
                     <div class="intro">
-                        <h1 class="text-center">{{$post->title}}</h1><img class="img-fluid" src="/assets/img/ITM0013552_1.jpg" style="width: 770px;"></div>
+                        <h1 class="text-center">{{$post->title}}</h1><img class="img-fluid" src="{{$images[0]->image_url}}" style="width: 770px;"></div>
                     <div class="text">
                         <p>{{$post->detail}}</p>
                         <p><a href="{{$post->product_link}}" target="_blank">{{$post->product_link_text}}</a></p>
@@ -32,11 +32,13 @@
                             <figcaption></figcaption>
                         </figure>
                         @endforeach
+                        @if(count($tags) > 1)
                         <p>タグ：
                             @foreach($tags as $tag)
                             <a href="{{$tag->name}}" target="_blank">{{$tag->name}}</a>
                             @endforeach
                         </p>
+                        @endif
                     </div>
                 </div>
             </div>
