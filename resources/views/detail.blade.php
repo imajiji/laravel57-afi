@@ -35,7 +35,7 @@
                         @if(count($tags) > 1)
                         <p>タグ：
                             @foreach($tags as $tag)
-                            <a href="{{$tag->name}}" target="_blank">{{$tag->name}}</a>
+                            <a href="/tag/{{$tag->name}}" target="_blank">{{$tag->name}}</a>
                             @endforeach
                         </p>
                         @endif

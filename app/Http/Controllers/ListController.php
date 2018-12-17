@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Tag;
 use Illuminate\Http\Request;
 
 class ListController extends Controller
@@ -12,9 +13,17 @@ class ListController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function category(Request $request)
     {
         $posts  = Post::where('category_id', $request->category)->get();
+        return view('list', compact('posts'));
+    }
+
+    public function tag(Request $request)
+    {
+        $posts  = Post::whereHas('tags', function($q) use ($request) {
+            $q->where('name', $request->tag);
+        })->get();
         return view('list', compact('posts'));
     }
 

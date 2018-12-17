@@ -17,4 +17,5 @@
 
 Route::get('/', 'TopController@index');
 Route::get('/detail/{id}', 'DetailController@index');
-Route::get('/list/{category?}', 'ListController@index');
+Route::get('/category/{category?}', 'ListController@category');
+Route::get('/tag/{tag?}', 'ListController@tag');

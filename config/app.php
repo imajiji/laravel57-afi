@@ -173,6 +173,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * 作成したサービスプロバイダを登録
+         */
+         App\Providers\ComposerServiceProvider::class,
     ],
 
     /*
