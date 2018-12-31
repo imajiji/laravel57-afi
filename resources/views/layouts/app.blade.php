@@ -2,6 +2,15 @@
 <html>
 <head>
     @yield('head')
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131544773-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131544773-1');
+    </script>
 </head>
 <body>
     <div>
@@ -42,7 +51,7 @@
                         <h3>リンク</h3>
                         <ul>
                             <li><a href="https://www.digiket.com/p/aflink/_data/AFID=debustock/?URL=https%3A%2F%2Fwww.digiket.com%2Fgachi%2F" target="_blank">デジケット</a></li>
-                            <li><a href="#">BIG-GYM</a></li>
+                            <li><a href="https://www.g-af.com/jump.php?site_id=bpr637&partner_code=nikaido" target="_blank">BIG-GYM</a></li>
                             <li></li>
                         </ul>
                     </div>
