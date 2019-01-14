@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    @yield('head')
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>@yield('title') | Debu stock</title>
+    @yield('pagecss')
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131544773-1"></script>
     <script>
