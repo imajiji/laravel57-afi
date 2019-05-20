@@ -13,10 +13,10 @@ class CreatePostsImagesTables extends Migration
      */
      public function up()
      {
-         Schema::create('posts_images', function (Blueprint $table) {
+         Schema::create('post_image', function (Blueprint $table) {
              $table->increments('id');
-             $table->integer('posts_id');
-             $table->integer('images_id');
+             $table->integer('post_id');
+             $table->integer('image_id');
              $table->timestamps();
          });
      }

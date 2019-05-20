@@ -15,12 +15,9 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('category_id')->nullable();
             $table->string('title', '255');
             $table->string('detail', '255');
-            $table->string('product_link', '255');
-            $table->string('product_link_text', '255');
-            $table->string('comment', '255')->nullable();
+            $table->text('owner_comment')->nullable();
             $table->timestamps();
         });
 

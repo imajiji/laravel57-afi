@@ -13,10 +13,10 @@ class UpdatePostsTables extends Migration
      */
     public function up()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->dropColumn('category_id');
-            $table->renameColumn('comment', 'owner_comment');
-        });
+        // Schema::table('posts', function (Blueprint $table) {
+        //     $table->dropColumn('category_id');
+        //     $table->renameColumn('comment', 'owner_comment');
+        // });
     }
 
     /**
@@ -26,8 +26,8 @@ class UpdatePostsTables extends Migration
      */
     public function down()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            //
-        });
+        // Schema::table('posts', function (Blueprint $table) {
+        //     //
+        // });
     }
 }

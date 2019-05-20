@@ -13,9 +13,9 @@ class UpdateImagesTables extends Migration
      */
     public function up()
     {
-        Schema::table('images', function (Blueprint $table) {
-            $table->dropColumn('post_id');
-        });
+        // Schema::table('images', function (Blueprint $table) {
+        //     $table->dropColumn('post_id');
+        // });
     }
 
     /**
@@ -25,8 +25,8 @@ class UpdateImagesTables extends Migration
      */
     public function down()
     {
-        Schema::table('images', function (Blueprint $table) {
-            //
-        });
+        // Schema::table('images', function (Blueprint $table) {
+        //     //
+        // });
     }
 }

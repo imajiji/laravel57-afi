@@ -13,10 +13,10 @@ class CreatePostsCategorysTables extends Migration
      */
     public function up()
     {
-        Schema::create('posts_categorys', function (Blueprint $table) {
+        Schema::create('post_category', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('posts_id');
-            $table->integer('categories_id');
+            $table->integer('post_id');
+            $table->integer('category_id');
             $table->timestamps();
         });
     }

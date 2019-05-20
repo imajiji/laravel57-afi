@@ -13,9 +13,9 @@ class UpdateTagsTables extends Migration
      */
     public function up()
     {
-        Schema::table('tags', function (Blueprint $table) {
-            $table->dropColumn('post_id');
-        });
+        // Schema::table('tags', function (Blueprint $table) {
+        //     $table->dropColumn('post_id');
+        // });
     }
 
     /**
@@ -25,8 +25,8 @@ class UpdateTagsTables extends Migration
      */
     public function down()
     {
-        Schema::table('tags', function (Blueprint $table) {
-            //
-        });
+        // Schema::table('tags', function (Blueprint $table) {
+        //     //
+        // });
     }
 }

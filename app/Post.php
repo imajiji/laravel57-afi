@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    //hasMany設定
+    //belongsToMany設定
     public function images()
     {
-        return $this->hasMany('App\Image');
+        return $this->belongsToMany('App\Image');
     }
 
     public function tags()
